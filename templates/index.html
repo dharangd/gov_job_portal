@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Indian Govt Job Portal</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Latest Govt Job Notifications</h1>
+  <table>
+    <tr><th>Title</th><th>Date</th><th>Link</th></tr>
+    {% for job in jobs %}
+    <tr>
+      <td>{{ job['title'] }}</td>
+      <td>{{ job['date'] }}</td>
+      <td><a href="{{ job['link'] }}" target="_blank">Open Notice</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
